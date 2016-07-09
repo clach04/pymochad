@@ -61,7 +61,7 @@ class PyMochad(object):
         :return resp: The response from mochad for the issued command
         :rtype: str
         """
-        self.socket.sendall(six.binary_type(cmd.encod('utf8')))
+        self.socket.sendall(six.binary_type(cmd.encode('utf8')))
         resp = self._read_response(self)
         return resp
 
